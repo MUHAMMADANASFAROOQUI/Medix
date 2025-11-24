@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDIX - Smart Bio Monitoring Chair</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="WhatsApp Image 2025-11-19 at 19.53.04_b6a61710.jpg" alt="MEDIX Logo" class="logo">
+            <div class="header-toggles">
+                <button id="high-contrast-toggle">High Contrast</button>
+                <button id="low-motion-toggle">Low Motion</button>
+                <button id="rtl-toggle">RTL</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="splash">
+            <h1>Welcome to MEDIX</h1>
+            <p class="text-center">Know your body better with Medix.</p>
+        </section>
+
+        <section id="language-selection">
+            <h2>Select Language</h2>
+            <div class="language-grid">
+            </div>
+        </section>
+
+        <section id="instructions">
+            <h2>Instructions & Consent</h2>
+            <div class="instructions-container">
+                <div class="instructions-visual">
+                    <img src="https://via.placeholder.com/400" alt="Instructions Visual">
+                </div>
+                <div class="instructions-steps">
+                    <h3>How it works</h3>
+                    <!-- Accordion structure for mobile, default list for larger screens -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">Step 1: Sit back and relax</button>
+                        <div class="accordion-content">
+                            <p>Please sit comfortably in the chair and ensure you are properly aligned.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Step 2: Place your arms</button>
+                        <div class="accordion-content">
+                            <p>Gently place your arms on the designated armrests for accurate readings.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Step 3: Follow instructions</button>
+                        <div class="accordion-content">
+                            <p>The screen will guide you through each stage of the monitoring process.</p>
+                        </div>
+                    </div>
+                    <div class="consent">
+                        <input type="checkbox" id="consent-checkbox">
+                        <label for="consent-checkbox">I have read and agree to the <a href="#">terms and conditions</a>.</label>
+                    </div>
+                    <button id="start-button" disabled>Start Monitoring</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="seat-detection">
+            <h2>Seat Detection</h2>
+            <div class="seat-detection-container">
+                <div class="heatmap"></div>
+                <div class="status-card">
+                    <h3>Chair Status</h3>
+                    <p>Please sit upright.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="vitals">
+            <h2>Vitals Overview</h2>
+            <!-- Swiper Container for mobile, Grid for Tablet/Kiosk -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper vitals-grid">
+                    <div class="swiper-slide">
+                        <div class="vital-card">
+                            <div class="icon">🌡️</div>
+                            <h3>Temperature</h3>
+                            <p>36.5 °C</p>
+                            <div class="gauge"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="vital-card">
+                            <div class="icon">💓</div>
+                            <h3>Heart Rate</h3>
+                            <p class="heartbeat">80 bpm</p>
+                            <div class="gauge"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="vital-card">
+                            <div class="icon">💨</div>
+                            <h3>SpO₂</h3>
+                            <p>98%</p>
+                            <div class="gauge"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="vital-card">
+                            <div class="icon">🩸</div>
+                            <h3>Blood Pressure</h3>
+                            <p>120/80 mmHg</p>
+                            <div class="gauge"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="vital-card">
+                            <div class="icon">🍬</div>
+                            <h3>Sugar</h3>
+                            <p>90 mg/dL</p>
+                            <div class="gauge"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+
+        <section id="questionnaire">
+            <h2>Health Questionnaire</h2>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="question-container">
+                <!-- Questions will be loaded here by JavaScript -->
+            </div>
+        </section>
+
+        <section id="results">
+            <h2>Processing & AI Results</h2>
+            <div class="results-container">
+                <div class="processing-animation">
+                    <div class="heartbeat-line"></div>
+                    <p>Analyzing your data...</p>
+                </div>
+                <div class="results-content">
+                    <h3>Your Comprehensive Health Overview</h3>
+                    <div class="risk-badges">
+                        <span class="badge low">Low Risk</span>
+                        <!-- Add more badges dynamically -->
+                    </div>
+                    <div class="probability-bar">
+                        <div class="probability" style="width: 75%;"></div> <!-- Example width -->
+                        <span>75% Probability of Good Health</span>
+                    </div>
+                    <p>Detailed insights will be provided here.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="summary">
+            <h2>Final Summary & Actions</h2>
+            <div class="summary-container">
+                <div class="summary-content">
+                    <h3>Your Session Summary</h3>
+                    <p>Review your complete health snapshot and recommended actions below.</p>
+                    <ul>
+                        <li>Temperature: <span class="summary-temp">36.5 °C</span></li>
+                        <li>Heart Rate: <span class="summary-hr">80 bpm</span></li>
+                        <li>SpO₂: <span class="summary-spo2">98%</span></li>
+                        <li>Blood Pressure: <span class="summary-bp">120/80 mmHg</span></li>
+                        <li>Sugar: <span class="summary-sugar">90 mg/dL</span></li>
+                    </ul>
+                </div>
+                <div class="summary-actions">
+                    <button class="action-button primary">Print Report</button>
+                    <button class="action-button secondary">Send to Doctor</button>
+                    <button class="action-button tertiary">Save to Profile</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MEDIX. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
